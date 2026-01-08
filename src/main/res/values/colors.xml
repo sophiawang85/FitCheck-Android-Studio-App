@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="topheader">#FF9800</color>
+    <color name="topboundary">#0097A7</color>
+    <color name="extradaccented">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- List Header -->
+    <color name="colorPrimary">#FF6F61</color>  <!-- Warm Coral -->
+    <color name="colorPrimaryDark">#E53935</color> <!-- Deep Red -->
+    <color name="colorAccent">#F48FB1</color> <!-- Soft Pink -->
+
+    <!-- Colors for List Items -->
+    <color name="color_normal">#F5F5F5</color> <!-- Default color -->
+    <color name="color_pressed">#E0E0E0</color> <!-- Color when pressed -->
+    <color name="color_focused">#D6D6D6</color> <!-- Color when focused -->
+</resources>
+

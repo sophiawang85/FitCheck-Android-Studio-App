@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.Fit_Check.ui.home.HomeFragment"
+        android:label="My Daily Calories"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_create_new_shopping_group"
+            app:destination="@id/navigation_shopping_group_detail" />
+
+        <action
+            android:id="@+id/action_edit_shopping_list"
+            app:destination="@id/navigation_shopping_list">
+        <!--<argument
+            android:name="selectedDate"
+            app:argType="com.example.Fit_Check.model.DateWithFoodList" /> -->
+    </action>
+
+</fragment>
+
+<fragment
+    android:id="@+id/navigation_shopping_group_detail"
+    android:name="com.example.Fit_Check.ui.date.DateFragment"
+    android:label="Date:"
+    tools:layout="@layout/fragment_date" />
+
+<fragment
+    android:id="@+id/navigation_shopping_list"
+    android:name="com.example.Fit_Check.ui.foodlist.FoodListFragment"
+    android:label="Today's Calories"
+    tools:layout="@layout/fragment_foods_list" >
+
+    <argument
+        android:name="selectedDate"
+        app:argType="com.example.Fit_Check.model.DateWithFoodList"
+        app:nullable="false"/>
+
+    <action
+        android:id="@+id/action_add_food_to_date"
+        app:destination="@id/navigation_food_detail" />
+<!--
+    <action
+        android:id="@+id/action_edit_merchandise_in_shopping_group"
+        app:destination="@id/navigation_food_detail" >
+
+        <argument
+            android:name="selectedDate"
+            app:argType="com.example.model.Fit_Check.DateWithFoodList" />
+
+        <argument
+            android:name="selectedFood"
+            app:argType="com.example.model.Fit_Check.Food" />
+
+        <argument
+            android:name="merchandiseTypes"
+            app:argType="java.util.List&lt;java.lang.String&gt;" />
+    </action>
+-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_food_detail"
+        android:name="com.example.Fit_Check.ui.food.FoodFragment"
+        android:label="Food"
+        tools:layout="@layout/fragment_addfood" />
+
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.Fit_Check.ui.dashboard.DashboardFragment"
+        android:label="Calories History"
+        tools:layout="@layout/fragment_dashboard" />
+
+</navigation>
